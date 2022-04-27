@@ -9,11 +9,11 @@ class TelaPython:
         [sg.Text('DDR Inicial:'), sg.Input(key='DDR inicial',size=12), sg.Text('DDR Final'), sg.Input(key='DDR final',size=12)],
         [sg.Text('__________________________________________Diurno_______________________________________')],
         [sg.Checkbox('Enviar todos os DIDs para o mesmo destino.', default=False, key='checkdestinodiu')],               
-        [sg.Text('Primeiro Destino:'), sg.Input(key='primeirodestinodia',size=10), sg.Text('Tipo de destino:'), sg.Checkbox('Ramal',default=False, key='checktiporamaldiu'), sg.Checkbox('URA',default=False,key='checktipouradiu')],
+        [sg.Text('Primeiro Destino:'), sg.Input(key='primeirodestinodiu',size=10), sg.Text('Tipo de destino:'), sg.Checkbox('Ramal',default=False, key='checktiporamaldiu'), sg.Checkbox('URA',default=False,key='checktipouradiu')],
         [sg.Text('_________________________________________Noturno_______________________________________')],
         [sg.Checkbox('Enviar todos os DIDs para o mesmo destino.', default=False, key='checkdestinonot')],               
         [sg.Text('Primeiro Destino:'), sg.Input(key='primeirodestinonot',size=10), sg.Text('Tipo de destino:'), sg.Checkbox('Ramal',default=False, key='checktiporamalnot'), sg.Checkbox('URA',default=False,key='checktipouranot')],
-        
+        [sg.Button('Ok')]
         ]
         
         window = sg.Window('3CX DID Rules Creator - By Michatec').layout(layout)
@@ -44,7 +44,7 @@ class TelaPython:
         tipo_diu_ura=self.values['checktipouradiu']
 
         destino_unico_not=self.values['checkdestinonot']
-        pri_destino_not=self.values['primeirodestinodnot']
+        pri_destino_not=self.values['primeirodestinonot']
         tipo_not_ramal=self.values['checktiporamalnot']
         tipo_not_ura=self.values['checktipouranot']
 
